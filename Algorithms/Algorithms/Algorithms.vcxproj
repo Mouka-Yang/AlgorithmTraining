@@ -115,6 +115,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="backtrack.cpp" />
     <ClCompile Include="DP1.cpp" />
     <ClCompile Include="Greedy.cpp" />
     <ClCompile Include="Source.cpp" />
