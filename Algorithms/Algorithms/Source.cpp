@@ -3,7 +3,9 @@
 int main()
 {
 	// Test Knight'Tour problem
-	vector<vector<int>> path = KnightTour_Heuristic(8, 0, 0);
+     //vector<vector<int>> path = KnightTour( 4, 0, 0 );
+     //vector<vector<int>> path = KnightTour_Heuristic( 4, 0, 0 );
+     vector<vector<int>> path = KnightTour_Iterative(16, 0, 0);
 	for (auto i : path) {
 		for (auto j : i)
 			cout << setw(4) << j << "  ";
