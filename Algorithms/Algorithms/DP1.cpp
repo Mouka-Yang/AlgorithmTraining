@@ -1,4 +1,5 @@
 #include "common.h"
+#include "DP1.h"
 
 /************** 0-1 Knapsack Problem *************************************
 

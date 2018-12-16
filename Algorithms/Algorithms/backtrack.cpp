@@ -1,4 +1,5 @@
 #include "common.h"
+#include "backtrack.h"
 
 #define Index(x,y,size)	((x) * (size) + (y))
 

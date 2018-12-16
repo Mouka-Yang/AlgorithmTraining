@@ -14,6 +14,9 @@
     <Filter Include="Backtracking">
       <UniqueIdentifier>{28f301ae-7014-4699-80a6-99454a8a090c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="BinaryTree">
+      <UniqueIdentifier>{acf2244e-df2a-46ac-af12-54c598fa9233}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DP1.cpp">
@@ -26,9 +29,24 @@
     <ClCompile Include="backtrack.cpp">
       <Filter>Backtracking</Filter>
     </ClCompile>
+    <ClCompile Include="BST.cpp">
+      <Filter>BinaryTree</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BST.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Greedy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DP1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="backtrack.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
