@@ -17,6 +17,9 @@
     <Filter Include="BinaryTree">
       <UniqueIdentifier>{acf2244e-df2a-46ac-af12-54c598fa9233}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Leetcode">
+      <UniqueIdentifier>{beec7d14-c9a9-49b5-9aca-0b39c44c5e10}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DP1.cpp">
@@ -31,6 +34,15 @@
     </ClCompile>
     <ClCompile Include="BST.cpp">
       <Filter>BinaryTree</Filter>
+    </ClCompile>
+    <ClCompile Include="misc.cpp">
+      <Filter>Leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="535.cpp">
+      <Filter>Leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="120.cpp">
+      <Filter>Leetcode</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -47,6 +59,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="backtrack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="misc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -2,6 +2,9 @@
 
 int main()
 {
+	// Test Count Primes
+	cout << CountPrimes(499979) << endl;
+	cin.get();
 
 	// Test Binary search tree
 	Node* root = NULL;
