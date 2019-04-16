@@ -17,9 +17,6 @@
     <Filter Include="BinaryTree">
       <UniqueIdentifier>{acf2244e-df2a-46ac-af12-54c598fa9233}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Leetcode">
-      <UniqueIdentifier>{beec7d14-c9a9-49b5-9aca-0b39c44c5e10}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DP1.cpp">
@@ -34,48 +31,6 @@
     </ClCompile>
     <ClCompile Include="BST.cpp">
       <Filter>BinaryTree</Filter>
-    </ClCompile>
-    <ClCompile Include="misc.cpp">
-      <Filter>Leetcode</Filter>
-    </ClCompile>
-    <ClCompile Include="535.cpp">
-      <Filter>Leetcode</Filter>
-    </ClCompile>
-    <ClCompile Include="120.cpp">
-      <Filter>Leetcode</Filter>
-    </ClCompile>
-    <ClCompile Include="Djkstra.cpp">
-      <Filter>Leetcode</Filter>
-    </ClCompile>
-    <ClCompile Include="787.cpp">
-      <Filter>Leetcode</Filter>
-    </ClCompile>
-    <ClCompile Include="15.cpp">
-      <Filter>Leetcode</Filter>
-    </ClCompile>
-    <ClCompile Include="3.cpp">
-      <Filter>Leetcode</Filter>
-    </ClCompile>
-    <ClCompile Include="409.cpp">
-      <Filter>Leetcode</Filter>
-    </ClCompile>
-    <ClCompile Include="5.cpp">
-      <Filter>Leetcode</Filter>
-    </ClCompile>
-    <ClCompile Include="8.cpp">
-      <Filter>Leetcode</Filter>
-    </ClCompile>
-    <ClCompile Include="14.cpp">
-      <Filter>Leetcode</Filter>
-    </ClCompile>
-    <ClCompile Include="17.cpp">
-      <Filter>Leetcode</Filter>
-    </ClCompile>
-    <ClCompile Include="38.cpp">
-      <Filter>Leetcode</Filter>
-    </ClCompile>
-    <ClCompile Include="43.cpp">
-      <Filter>Leetcode</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

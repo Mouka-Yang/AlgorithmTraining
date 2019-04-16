@@ -115,24 +115,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="120.cpp" />
-    <ClCompile Include="14.cpp" />
-    <ClCompile Include="15.cpp" />
-    <ClCompile Include="17.cpp" />
-    <ClCompile Include="3.cpp" />
-    <ClCompile Include="38.cpp" />
-    <ClCompile Include="409.cpp" />
-    <ClCompile Include="43.cpp" />
-    <ClCompile Include="5.cpp" />
-    <ClCompile Include="535.cpp" />
-    <ClCompile Include="787.cpp" />
-    <ClCompile Include="8.cpp" />
     <ClCompile Include="backtrack.cpp" />
     <ClCompile Include="BST.cpp" />
-    <ClCompile Include="Djkstra.cpp" />
     <ClCompile Include="DP1.cpp" />
     <ClCompile Include="Greedy.cpp" />
-    <ClCompile Include="misc.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
