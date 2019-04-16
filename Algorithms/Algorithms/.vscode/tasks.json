@@ -1,0 +1,40 @@
+{
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "g++.exe build active file",
+      "command": "C:/cygwin64/bin/g++.exe",
+      "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "a.exe"
+      ],
+      "options": {
+        "cwd": "C:/cygwin64/bin"
+      }
+    },
+    {
+      "type": "shell",
+      "label": "g++.exe build active file",
+      "command": "C:/cygwin64/bin/g++.exe",
+      "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "a.exe"
+      ],
+      "options": {
+        "cwd": "C:/cygwin64/bin"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ],
+  "version": "2.0.0"
+}

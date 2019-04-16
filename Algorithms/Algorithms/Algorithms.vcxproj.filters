@@ -44,6 +44,39 @@
     <ClCompile Include="120.cpp">
       <Filter>Leetcode</Filter>
     </ClCompile>
+    <ClCompile Include="Djkstra.cpp">
+      <Filter>Leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="787.cpp">
+      <Filter>Leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="15.cpp">
+      <Filter>Leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="3.cpp">
+      <Filter>Leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="409.cpp">
+      <Filter>Leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="5.cpp">
+      <Filter>Leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="8.cpp">
+      <Filter>Leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="14.cpp">
+      <Filter>Leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="17.cpp">
+      <Filter>Leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="38.cpp">
+      <Filter>Leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="43.cpp">
+      <Filter>Leetcode</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common.h">
