@@ -8,6 +8,10 @@
         "xhash": "cpp",
         "xstring": "cpp",
         "xtree": "cpp",
-        "xutility": "cpp"
+        "xutility": "cpp",
+        "xiosbase": "cpp",
+        "queue": "cpp",
+        "type_traits": "cpp",
+        "string": "cpp"
     }
 }
