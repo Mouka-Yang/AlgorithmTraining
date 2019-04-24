@@ -45,7 +45,6 @@ using namespace std;
 class Solution {
    public:
     int removeDuplicates(vector<int>& nums) {
-        // if (nums.size() < 2) return 1;
         int cur_val = 123456, cur_index = 0, unique = 0,
             len = nums.size();
 
