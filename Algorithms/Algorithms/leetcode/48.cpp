@@ -1,43 +1,72 @@
-#include <iostream>
-#include <string>
-#include <vector>
+/*
+Rotate Image
+
+You are given an n x n 2D matrix representing an image.
+
+Rotate the image by 90 degrees (clockwise).
+
+Note:
+
+You have to rotate the image in-place, which means you have to modify the input
+2D matrix directly. DO NOT allocate another 2D matrix and do the rotation.
+
+Example 1:
+
+Given input matrix =
+[
+  [1,2,3],
+  [4,5,6],
+  [7,8,9]
+],
+
+rotate the input matrix in-place such that it becomes:
+[
+  [7,4,1],
+  [8,5,2],
+  [9,6,3]
+]
+Example 2:
+
+Given input matrix =
+[
+  [ 5, 1, 9,11],
+  [ 2, 4, 8,10],
+  [13, 3, 6, 7],
+  [15,14,12,16]
+],
+
+rotate the input matrix in-place such that it becomes:
+[
+  [15,13, 2, 5],
+  [14, 3, 4, 1],
+  [12, 6, 8, 9],
+  [16, 7,10,11]
+]
+*/
+
 #include <algorithm>
-#include <unordered_map>
+#include <iostream>
+#include <numeric>
+#include <vector>
 using namespace std;
 
-class Solution
-{
-  public:
-    vector<vector<string>> groupAnagrams(vector<string> &strs)
-    {
-        unordered_map<string, vector<string>> mymap;
-        vector<vector<string>> res;
-        vector<int> count(26);
-        for(auto& s : strs){
-            fill(count.begin(), count.end(), 0);
-            string tmp = "";
-            for(auto& c : s){
-                count[c-'a']++;
+class Solution {
+   public:
+    void rotate(vector<vector<int>>& matrix) {
+        int len = matrix.size();
+        for (int i = 0; i < len / 2; i++) {
+            for (int j = i; j < len - i; j++) {
+                int tmp = matrix[i][j];
+                matrix[i][j] = matrix[len - 1 - j][i];
+                matrix[len - 1 - j][i] = matrix[len - 1 - i][len - 1 - j];
+                matrix[len - 1 - i][len - 1 - j] = matrix[j][len - 1 - i];
+                matrix[j][len - 1 - i] = tmp;
             }
-            for(auto& i: count){
-                tmp += "#";
-                tmp += to_string(i);
-            }
-            mymap[tmp].push_back(s);
         }
-        for (auto& x : mymap){
-            res.push_back(x.second);
-        }
-       
-        return res;
     }
 };
 
-int main(){
-    vector<string> strs{"eat", "tea", "tan", "ate", "nat", "bat" };
-    auto res = Solution().groupAnagrams(strs);
-    for (auto& x : res){
-        for_each(x.begin(), x.end(), [](const string& s){cout << s << " ";});
-        cout << endl;
-    }
+int main() {
+    vector<vector<int>> n{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    Solution().rotate(n);
 }
