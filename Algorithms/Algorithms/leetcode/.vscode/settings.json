@@ -8,6 +8,11 @@
         "unordered_set": "cpp",
         "type_traits": "cpp",
         "functional": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "utility": "cpp",
+        "xhash": "cpp",
+        "unordered_map": "cpp",
+        "limits": "cpp",
+        "list": "cpp"
     }
 }
