@@ -4,6 +4,10 @@
         "algorithm": "cpp",
         "xstring": "cpp",
         "vector": "cpp",
-        "xutility": "cpp"
+        "xutility": "cpp",
+        "unordered_set": "cpp",
+        "type_traits": "cpp",
+        "functional": "cpp",
+        "random": "cpp"
     }
 }
