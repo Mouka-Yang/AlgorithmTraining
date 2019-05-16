@@ -13,6 +13,7 @@
         "xhash": "cpp",
         "unordered_map": "cpp",
         "limits": "cpp",
-        "list": "cpp"
+        "list": "cpp",
+        "queue": "cpp"
     }
 }
