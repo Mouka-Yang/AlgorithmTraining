@@ -50,7 +50,7 @@ using namespace std;
  */
 class RandomizedSet2 {
    private:
-    enum { defaultSize = 10 };
+    const int defaultSize = 10;
     const int defaultValue = 9876543;
 
     hash<int> hashFunc;
