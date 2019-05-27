@@ -14,6 +14,7 @@
         "unordered_map": "cpp",
         "limits": "cpp",
         "list": "cpp",
-        "queue": "cpp"
+        "queue": "cpp",
+        "stack": "cpp"
     }
 }
