@@ -43,11 +43,13 @@ struct TreeNode {
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
-class Solution {
-   public:
-    TreeNode* buildSubTree(vector<int>& preorder, int preStart, vector<int>& inorder, int inStart, int inEnd, unordered_map<int, int>& mymap) {
-        if (inStart > inEnd)
-            return NULL;
+class Solution
+{
+public:
+    TreeNode* buildSubTree(vector<int>& preorder, int preStart, vector<int>& inorder, int inStart, int inEnd,
+                           unordered_map<int, int>& mymap)
+    {
+        if (inStart > inEnd) return NULL;
 
         auto rootVal = preorder[preStart];
         auto root = new TreeNode(rootVal);
@@ -57,7 +59,8 @@ class Solution {
         root->right = buildSubTree(preorder, preStart + rootPos - inStart + 1, inorder, rootPos + 1, inEnd, mymap);
         return root;
     }
-    TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
+    TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder)
+    {
         unordered_map<int, int> mymap;
         for (int i = 0; i < inorder.size(); i++) {
             mymap[inorder[i]] = i;
@@ -66,7 +69,8 @@ class Solution {
     }
 };
 
-int main() {
+int main()
+{
     vector<int> pre = {-1};
     vector<int> in = {-1};
     Solution().buildTree(pre, in);
