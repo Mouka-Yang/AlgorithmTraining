@@ -9,7 +9,7 @@
 *.exe
 venv/
 .vscode/
-
+a.out
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
