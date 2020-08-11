@@ -1,0 +1,24 @@
+BasedOnStyle: Google
+IndentWidth: 4
+NamespaceIndentation: None
+
+Language: Cpp
+PointerAlignment: Left
+
+ColumnLimit: 120
+AlignTrailingComments: true
+AlignConsecutiveAssignments: true
+AlignConsecutiveDeclarations: true
+AlignOperands: true
+AlignAfterOpenBracket: Align
+BreakConstructorInitializers: AfterColon
+
+BreakBeforeBraces: Stroustrup
+UseTab: Never
+AccessModifierOffset: -4
+AllowShortBlocksOnASingleLine: Empty
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false 
+

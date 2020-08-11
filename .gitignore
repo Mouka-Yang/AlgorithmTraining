@@ -8,8 +8,9 @@
 *.sln.docstates
 *.exe
 venv/
-.vscode/
-a.out
+# .vscode/
+*.out
+*.gdb_history
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 

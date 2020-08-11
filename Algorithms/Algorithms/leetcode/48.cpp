@@ -50,23 +50,28 @@ rotate the input matrix in-place such that it becomes:
 #include <vector>
 using namespace std;
 
-class Solution {
-   public:
-    void rotate(vector<vector<int>>& matrix) {
-        int len = matrix.size();
-        for (int i = 0; i < len / 2; i++) {
-            for (int j = i; j < len - i; j++) {
-                int tmp = matrix[i][j];
-                matrix[i][j] = matrix[len - 1 - j][i];
-                matrix[len - 1 - j][i] = matrix[len - 1 - i][len - 1 - j];
-                matrix[len - 1 - i][len - 1 - j] = matrix[j][len - 1 - i];
-                matrix[j][len - 1 - i] = tmp;
-            }
-        }
+class Solution
+{
+public:
+  void rotate(vector<vector<int>> &matrix)
+  {
+    int matrixLen = matrix.size();
+    for (int i = 0; i < matrixLen / 2; i++)
+    {
+      for (int j = i; j < matrixLen - i; j++)
+      {
+        int tmp = matrix[i][j];
+        matrix[i][j] = matrix[matrixLen - 1 - j][i];
+        matrix[matrixLen - 1 - j][i] = matrix[matrixLen - 1 - i][matrixLen - 1 - j];
+        matrix[matrixLen - 1 - i][matrixLen - 1 - j] = matrix[j][matrixLen - 1 - i];
+        matrix[j][matrixLen - 1 - i] = tmp;
+      }
     }
+  }
 };
 
-int main() {
-    vector<vector<int>> n{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-    Solution().rotate(n);
+int main()
+{
+  vector<vector<int>> n{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+  Solution().rotate(n);
 }
