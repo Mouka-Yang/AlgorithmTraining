@@ -6,7 +6,7 @@ struct ListNode {
     ListNode(int x, ListNode* next) : val(x), next(next) {}
 };
 
-ListNode* ConstructList() class Solution {
+class Solution {
 public:
     ListNode* deleteDuplicates(ListNode* head)
     {
@@ -26,5 +26,6 @@ public:
                 curr = curr->next;
             }
         }
+        return preHead->next;
     }
 };

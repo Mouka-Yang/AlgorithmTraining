@@ -28,8 +28,9 @@ Output:
 using namespace std;
 
 class Solution {
-   public:
-    void subsubsets2(vector<int>& nums, int start, vector<vector<int>>& res, vector<int>& partial) {
+public:
+    void subsubsets2(vector<int>& nums, int start, vector<vector<int>>& res, vector<int>& partial)
+    {
         if (start == nums.size()) {
             res.push_back(partial);
         }
@@ -40,7 +41,8 @@ class Solution {
         subsubsets(nums, start + 1, res, partial);
     }
 
-    void subsubsets(vector<int>& nums, int start, vector<vector<int>>& res, vector<int>& partial) {
+    void subsubsets(vector<int>& nums, int start, vector<vector<int>>& res, vector<int>& partial)
+    {
         res.push_back(partial);
         for (auto i = start; i < nums.size(); i++) {
             partial.push_back(nums[i]);
@@ -48,15 +50,17 @@ class Solution {
             partial.pop_back();
         }
     }
-    vector<vector<int>> subsets2(vector<int>& nums) {
-        vector<int> partial;
+    vector<vector<int>> subsets2(vector<int>& nums)
+    {
+        vector<int>         partial;
         vector<vector<int>> res;
         subsubsets(nums, 0, res, partial);
 
         return res;
     }
 
-    vector<vector<int>> subsets(vector<int>& nums) {
+    vector<vector<int>> subsets(vector<int>& nums)
+    {
         vector<vector<int>> res{{}};
 
         for (int i = 0; i < nums.size(); i++) {

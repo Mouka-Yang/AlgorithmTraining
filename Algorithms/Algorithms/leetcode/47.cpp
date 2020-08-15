@@ -5,7 +5,7 @@ std::pair<int, bool> initializeState(int num)
 }
 class Solution {
 public:
-    using Result_T  = std::vector<std::vector<int>>;
+    using Result_T = std::vector<std::vector<int>>;
     using Partial_T = std::vector<int>;
 
     std::vector<std::vector<int>> permute(std::vector<int>& nums)
@@ -26,7 +26,8 @@ public:
             auto len = numsState.size();
             for (int i = 0; i < len; i++) {
                 auto& [num, isUsed] = numsState[i];
-                if (isUsed || i > 0 && numsState[i].first == numsState[i - 1].first && !numsState[i - 1].second) {
+                if (isUsed || i > 0 && numsState[i].first == numsState[i - 1].first &&
+                                  !numsState[i - 1].second) {
                     continue;
                 }
                 isUsed = true;
@@ -40,7 +41,7 @@ public:
 
 private:
     Partial_T partial{};
-    Result_T  results{};
+    Result_T results{};
 };
 
 int main()
