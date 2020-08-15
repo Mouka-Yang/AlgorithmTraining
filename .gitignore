@@ -13,7 +13,8 @@ venv/
 *.gdb_history
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
-
+build/
+c++/
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
