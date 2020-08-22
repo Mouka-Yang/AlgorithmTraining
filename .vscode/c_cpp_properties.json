@@ -6,12 +6,17 @@
                 "${workspaceFolder}/**"
             ],
             "defines": [],
-            "compilerPath": "/usr/bin/clang",
+            "compilerPath": "/usr/bin/g++",
             "cStandard": "c11",
             "intelliSenseMode": "gcc-x64",
             "compilerArgs": [
-                "-Wall"
-            ]
+                "-Wall",
+                "-Werror",
+                "-Wfatal-errors",
+                "-Wpedantic",
+                "-Wextra"
+            ],
+            "configurationProvider": "ms-vscode.cmake-tools"
         }
     ],
     "version": 4
