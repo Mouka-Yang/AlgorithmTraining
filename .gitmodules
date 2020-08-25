@@ -1,3 +1,6 @@
 [submodule "OpenSource/googletest"]
-	path = OpenSource/googletest
-	url = https://github.com/google/googletest.git
+path = OpenSource/googletest
+url = https://github.com/google/googletest.git
+[submodule "OpenSource/benchmark"]
+path = OpenSource/benchmark
+url = https://github.com/google/benchmark.git
