@@ -1,23 +1,23 @@
 {
-    "configurations": [
-        {
-            "name": "Linux",
-            "includePath": [
-                "${workspaceFolder}/**"
-            ],
-            "defines": [],
-            "compilerPath": "/usr/bin/g++",
-            "cStandard": "c11",
-            "intelliSenseMode": "gcc-x64",
-            "compilerArgs": [
-                "-Wall",
-                "-Werror",
-                "-Wfatal-errors",
-                "-Wpedantic",
-                "-Wextra"
-            ],
-            "configurationProvider": "ms-vscode.cmake-tools"
-        }
-    ],
+    "configurations": [{
+        "name": "Linux",
+        "includePath": [
+            "${workspaceFolder}/**"
+        ],
+        "defines": [],
+        "compilerPath": "/usr/bin/clang",
+        "cStandard": "c11",
+        "cppStandard": "c++17",
+        "intelliSenseMode": "clang-x64",
+        "compilerArgs": [
+            "-Wall",
+            "-Werror",
+            "-Wfatal-errors",
+            "-Wpedantic",
+            "-Wextra"
+        ],
+        "configurationProvider": "ms-vscode.cmake-tools",
+        "compileCommands": "${workspaceFolder}/build/compile_commands.json"
+    }],
     "version": 4
 }
