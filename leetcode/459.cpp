@@ -1,7 +1,9 @@
 /*
  Repeated Substring Pattern
 
-Given a non-empty string check if it can be constructed by taking a substring of it and appending multiple copies of the substring together. You may assume the given string consists of lowercase English letters only and its length will not exceed 10000.
+Given a non-empty string check if it can be constructed by taking a substring of it and appending
+multiple copies of the substring together. You may assume the given string consists of lowercase
+English letters only and its length will not exceed 10000.
 
 Example 1:
 
@@ -18,28 +20,24 @@ Input: "abcabcabcabc"
 Output: True
 Explanation: It's the substring "abc" four times. (And the substring "abcabc" twice.)
 */
+#include <iostream>
+#include <iterator>
 #include <string>
 #include <vector>
-#include <iostream>
 using namespace std;
 
-class Solution
-{
-  public:
+class Solution {
+public:
     bool repeatedSubstringPattern(string s)
     {
-        auto len = s.size();
+        auto aa    = std::vector<int>::const_iterator;
+        auto len   = s.size();
         bool wrong = false;
-        for (auto step = 1; step <= len / 2; step++)
-        {
-            if (len % step == 0)
-            {
-                for (auto i = 0; i < step; i++)
-                {
-                    for (auto j = i; j < len; j += step)
-                    {
-                        if (s[j] != s[i])
-                        {
+        for (auto step = 1; step <= len / 2; step++) {
+            if (len % step == 0) {
+                for (auto i = 0; i < step; i++) {
+                    for (auto j = i; j < len; j += step) {
+                        if (s[j] != s[i]) {
                             wrong = true;
                             break;
                         }

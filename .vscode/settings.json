@@ -1,5 +1,6 @@
 {
     "files.associations": {
+        "*.in": "cmake",
         "numeric": "cpp",
         "cctype": "cpp",
         "clocale": "cpp",
@@ -49,7 +50,8 @@
         "stdexcept": "cpp",
         "streambuf": "cpp",
         "cinttypes": "cpp",
-        "typeinfo": "cpp"
+        "typeinfo": "cpp",
+        "regex": "cpp"
     },
     "cmake.sourceDirectory": "${workspaceFolder}/.",
     "cmake.configureOnOpen": true,
