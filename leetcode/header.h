@@ -81,7 +81,7 @@ void DeleteList(ListNode* head)
 
 constexpr int MAGIC_INT = 19950813;
 
-TreeNode* getTreeNode(const std::vector<int>& nums, int count)
+TreeNode* getTreeNode(const std::vector<int>& nums, size_t count)
 {
     if (nums.size() == count) {
         return nullptr;
@@ -102,7 +102,7 @@ TreeNode* ConstructTreeFromVector(const std::vector<int>& nums)
     }
 
     std::deque<TreeNode*> nodes{};
-    auto                  count    = 0;
+    auto                  count    = 0U;
     auto                  maxCount = nums.size();
     TreeNode*             root     = new TreeNode(nums[count++]);
 
@@ -141,7 +141,7 @@ std::vector<std::vector<int>> levelOrder(TreeNode* root)
     queue.push_back(root);
     while (!queue.empty()) {
         auto levelNum = queue.size();
-        for (int i = 0; i < levelNum; i++) {
+        for (auto i = 0U; i < levelNum; i++) {
             auto node = queue.front();
             queue.pop_front();
             if (node->left != nullptr) {
