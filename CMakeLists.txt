@@ -18,8 +18,6 @@ set(PROJECT_OUTPUT_BIN_PATH "${CMAKE_BINARY_DIR}/bin")
 set(PROJECT_OUTPUT_LIB_PATH "${CMAKE_BINARY_DIR}/lib")
 set(PROJECT_OUTPUT_TEST_PATH "${CMAKE_BINARY_DIR}/test")
 
-add_compile_options(-Wall -Wextra -g -O0)
-
 set(CMAKE_BUILD_TYPE Debug)
 add_compile_options(-Wall -Wextra -g -O0)
 
