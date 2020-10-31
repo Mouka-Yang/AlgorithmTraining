@@ -1,17 +1,3 @@
-
-set(TEST_BINARY ${CMAKE_PROJECT_NAME}_test)
-
-# file(
-#   GLOB_RECURSE TEST_SOURCES
-#   LIST_DIRECTORIES false
-#   *.h *.cpp)
-
-# set(SOURCES ${TEST_SOURCES})
-# add_executable(${TEST_BINARY} ${SOURCES})
-# target_link_libraries(${TEST_BINARY} PUBLIC add gtest)
-
-add_test(NAME ${TEST_BINARY} COMMAND ${TEST_BINARY})
-
 add_executable(unittest_96 ${LEETCODE_PATH}/96.cpp)
 target_link_libraries(unittest_96 PUBLIC gtest_main)
 
@@ -21,4 +7,12 @@ target_link_libraries(unittest_503 PUBLIC gtest_main)
 add_executable(unittest_739 ${LEETCODE_PATH}/739.cpp)
 target_link_libraries(unittest_739 PUBLIC gtest_main)
 
+add_executable(unittest_547 ${LEETCODE_PATH}/547.cpp)
+target_link_libraries(unittest_547 PUBLIC gtest_main)
 
+add_executable(data_struct_test 
+    ${DATA_STRUCT_PATH}/disjoint_set.cpp
+)
+target_link_libraries(data_struct_test PUBLIC gtest_main)
+
+add_test(NAME data_struct_test COMMAND ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/data_struct_test)
