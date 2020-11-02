@@ -15,10 +15,13 @@ public:
         }
         return p->val == q->val && compareSubtree(p->left, q->left) && compareSubtree(p->right, q->right);
     }
-    bool isSameTree(TreeNode* p, TreeNode* q) { return compareSubtree(p, q); }
-    int aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa(int aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,
-                                                                         int bbbbbbbbbbbbbbbbbbbbbbbbb,
-                                                                         int ccccccccccccccccccccccccccccccccc)
+    bool isSameTree(TreeNode* p, TreeNode* q)
+    {
+        return compareSubtree(p, q);
+    }
+    int aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa(
+        int aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa, int bbbbbbbbbbbbbbbbbbbbbbbbb,
+        int ccccccccccccccccccccccccccccccccc)
     {
         if (1) {
             return 1;
@@ -39,7 +42,7 @@ public:
         int a[] = {1, 2, 3, 4, 5, 6, 4, 2, 5, 6, 33, 5, 6, 3};  // .......
         int b = 3;                                              //.....
 
-        while (true) continue;
+        while (true)
+            continue;
         return 0;
-    }
-};
+    }};

@@ -13,6 +13,8 @@ add_leetcode_test(684)
 add_leetcode_test(200)
 add_leetcode_test(200v2)
 add_leetcode_test(1208)
+add_leetcode_test(209v2)
+add_leetcode_test(560)
 
 add_executable(data_struct_test 
     ${DATA_STRUCT_PATH}/disjoint_set.cpp
