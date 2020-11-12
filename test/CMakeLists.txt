@@ -2,6 +2,7 @@ MACRO(add_leetcode_test problem_num)
     set(leetcode_target "unittest_${problem_num}")
     add_executable(${leetcode_target} ${LEETCODE_PATH}/${problem_num}.cpp)
     target_link_libraries(${leetcode_target} PUBLIC gtest_main)
+    target_include_directories(${leetcode_target} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../)
     add_test(NAME ${leetcode_target} COMMAND ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${leetcode_target})
 ENDMACRO()
 
@@ -15,9 +16,26 @@ add_leetcode_test(200v2)
 add_leetcode_test(1208)
 add_leetcode_test(209v2)
 add_leetcode_test(560)
+add_leetcode_test(974)
+add_leetcode_test(1094)
+add_leetcode_test(1109)
+add_leetcode_test(210_topological_sort)
+add_leetcode_test(310_dfs)
+add_leetcode_test(310_topological)
+add_leetcode_test(179_sort)
+add_leetcode_test(1353_greedy)
+add_leetcode_test(93_backtrack)
+add_leetcode_test(838_dp)
+add_leetcode_test(752_bfs)
+add_leetcode_test(678_stack)
+add_leetcode_test(127_bfs)
+add_leetcode_test(139_bfs)
+add_leetcode_test(139_dp)
 
-add_executable(data_struct_test 
+
+add_executable(data_struct_test
     ${DATA_STRUCT_PATH}/disjoint_set.cpp
+    ${DATA_STRUCT_PATH}
 )
 target_link_libraries(data_struct_test PUBLIC gtest_main)
 
