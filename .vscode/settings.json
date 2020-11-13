@@ -51,7 +51,8 @@
         "streambuf": "cpp",
         "cinttypes": "cpp",
         "typeinfo": "cpp",
-        "regex": "cpp"
+        "regex": "cpp",
+        "cstdbool": "cpp"
     },
     "cmake.sourceDirectory": "${workspaceFolder}/.",
     "cmake.configureOnOpen": true,
