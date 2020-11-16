@@ -22,6 +22,7 @@ set(PROJECT_OUTPUT_TEST_PATH "${CMAKE_BINARY_DIR}/test")
 set(CMAKE_BUILD_TYPE Debug)
 add_compile_options(-Wall -Wextra -g -O0)
 
-add_subdirectory(${PROJECT_OPENSOURCE_PATH})
+include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/GoogleTest.cmake)
+
 add_subdirectory(test)
 
