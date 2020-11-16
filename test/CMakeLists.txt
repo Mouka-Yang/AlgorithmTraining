@@ -35,6 +35,9 @@ add_leetcode_test(200_bfs)
 add_leetcode_test(688_dfs)
 add_leetcode_test(5_dp)
 add_leetcode_test(516_dp)
+add_leetcode_test(1143_dp)
+add_leetcode_test(300_dp)
+add_leetcode_test(934_bfs)
 
 
 add_executable(data_struct_test
