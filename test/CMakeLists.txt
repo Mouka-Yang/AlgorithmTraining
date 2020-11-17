@@ -1,7 +1,7 @@
 MACRO(add_leetcode_test problem_num)
     set(leetcode_target "unittest_${problem_num}")
     add_executable(${leetcode_target} ${LEETCODE_PATH}/${problem_num}.cpp)
-    target_link_libraries(${leetcode_target} PUBLIC gtest_main)
+    target_link_libraries(${leetcode_target} PUBLIC gmock_main)
     target_include_directories(${leetcode_target} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../)
     add_test(NAME ${leetcode_target} COMMAND ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${leetcode_target})
 ENDMACRO()
@@ -38,6 +38,8 @@ add_leetcode_test(516_dp)
 add_leetcode_test(1143_dp)
 add_leetcode_test(300_dp)
 add_leetcode_test(934_bfs)
+add_leetcode_test(130_bfs)
+add_leetcode_test(337_bfs)
 
 
 add_executable(data_struct_test
