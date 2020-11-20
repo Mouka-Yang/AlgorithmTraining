@@ -25,4 +25,4 @@ add_compile_options(-Wall -Wextra -g -O0)
 include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/GoogleTest.cmake)
 
 add_subdirectory(test)
-
+add_subdirectory(cpp_training)

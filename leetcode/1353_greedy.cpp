@@ -3,30 +3,31 @@
 #include <algorithm>
 #include <unordered_set>
 #include <vector>
-bool compareEvents(const std::vector<int>& eventX, const std::vector<int>& eventY)
-{
-    return eventX[1] - eventX[0] < eventY[1] - eventY[0];
-}
 
 class Solution {
 public:
     int maxEvents(std::vector<std::vector<int>>& events)
     {
-        std::sort(events.begin(), events.end(), compareEvents);
+        std::sort(
+            events.begin(), events.end(), [](const auto& lhs, const auto& rhs) { return lhs[0] < rhs[0]; });
 
-        std::unordered_set<int> dayCount{};
+        std::sort(
+            events.begin(), events.end(), [](const auto& lhs, const auto& rhs) { return lhs[1] < rhs[1]; });
+
+        std::vector<int> record(100000, 0);
+
+        auto count{0U};
         for (const auto& event : events) {
-            auto startDay{event[0]};
-            auto endDay{event[1]};
-            for (auto i{startDay}; i <= endDay; ++i) {
-                if (dayCount.count(i) == 0) {
-                    dayCount.insert(i);
+            for (auto i{event[0]}; i <= event[1]; ++i) {
+                if (record[i] == 0) {
+                    record[i] = 1;
+                    ++count;
                     break;
                 }
             }
         }
 
-        return dayCount.size();
+        return count;
     }
 };
 
