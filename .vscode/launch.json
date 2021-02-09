@@ -8,7 +8,7 @@
             "name": "g++ - Build and debug active file",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}/../build/bin/unittest_${fileBasenameNoExtension}",
+            "program": "${fileDirname}/../build/bin/${fileBasenameNoExtension}_ut",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",

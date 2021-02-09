@@ -25,6 +25,35 @@ public:
         }
         return head;
     }
+
+    ListNode* reverseBetweenV2(ListNode* head, int m, int n) {
+      ListNode preHead{};
+      preHead.next = head;
+
+      auto nodeBeforeReverse = &preHead;
+      auto nodeStartReverse = head;
+      auto reverseLen = n - m + 1;
+
+      while (m-- > 1) {
+        nodeBeforeReverse = nodeBeforeReverse->next;
+        nodeStartReverse = nodeStartReverse->next;
+      }
+
+      auto curr = nodeStartReverse;
+      ListNode* preCurr = nullptr;
+      while (reverseLen-- > 0) {
+        auto tmp = curr->next;
+        curr->next = preCurr;
+
+        preCurr = curr;
+        curr = tmp;
+      }
+
+      nodeBeforeReverse->next = preCurr;
+      nodeStartReverse->next = curr;
+
+      return preHead.next;
+    }
 };
 
 int main()

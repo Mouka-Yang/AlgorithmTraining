@@ -30,7 +30,32 @@ public:
         return results_;
     }
 
-private:
+    std::vector<std::vector<int>> pathSum_dfs(TreeNode* root, int targetSum) {
+      dfs(root, targetSum);
+      return results_;
+    }
+
+    void dfs(TreeNode* node, int remain) {
+      remain -= node->val;
+      currentResult_.push_back(node->val);
+      if (remain == 0 && node->left == nullptr && node->right == nullptr) {
+        results_.push_back(currentResult_);
+        currentResult_.pop_back();
+        return;
+      }
+
+      if (node->left) {
+        dfs(node->left, remain);
+      }
+
+      if (node->right) {
+        dfs(node->right, remain);
+      }
+
+      currentResult_.pop_back();
+    }
+
+   private:
     std::vector<std::vector<int>> results_{};
     std::vector<int>              currentResult_{};
 };

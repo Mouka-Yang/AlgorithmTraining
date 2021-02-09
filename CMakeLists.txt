@@ -3,7 +3,8 @@ project(AlgorithmTraining)
 
 enable_testing()
 
-set(CMAKE_CXX_STANDARD_REQUIRED 17)
+include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/GoogleTest.cmake)
+
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
@@ -22,7 +23,6 @@ set(PROJECT_OUTPUT_TEST_PATH "${CMAKE_BINARY_DIR}/test")
 set(CMAKE_BUILD_TYPE Debug)
 add_compile_options(-Wall -Wextra -g -O0)
 
-include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/GoogleTest.cmake)
 
 add_subdirectory(test)
 add_subdirectory(cpp_training)

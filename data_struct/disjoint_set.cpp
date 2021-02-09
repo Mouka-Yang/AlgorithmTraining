@@ -24,11 +24,18 @@ public:
 
     size_t findNode(size_t index)
     {
-        auto current{index};
-        while(parents[current] != current){
-            current = parents[current];
-        }
-        return current;
+      auto root{index};
+      while (parents[root] != root) {
+        root = parents[root];
+      }
+
+      while (parents[index] != root) {
+        auto parent = parents[index];
+        parents[index] = root;
+        index = parent;
+      }
+
+      return root;
     }
 
     void unionNode(size_t nodeX, size_t nodeY) {
@@ -36,8 +43,10 @@ public:
         auto rootY{findNode(nodeY)};
         if (ranks[rootX] <= ranks[rootY]) {
             parents[rootX] = rootY;
+            ranks[rootY] += ranks[rootX];
         } else {
             parents[rootY] = rootX;
+            ranks[rootX] = ranks[rootY];
         }
 
         if(ranks[rootX] == ranks[rootY]){
