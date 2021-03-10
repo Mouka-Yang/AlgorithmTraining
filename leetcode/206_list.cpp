@@ -4,50 +4,72 @@
 using namespace testing;
 
 class Solution {
- public:
-  ListNode* reverseList(ListNode* head) {
-    std::vector<ListNode*> nodeArray{};
+public:
+    ListNode* reverseListIteration(ListNode* head)
+    {
+        ListNode preHead{};
+        preHead.next = head;
 
-    auto curr = head;
-    while (curr != nullptr) {
-      nodeArray.push_back(curr);
-      curr = curr->next;
+        auto* curr = head;
+        ListNode* pre = nullptr;
+
+        while (curr != nullptr) {
+            auto* next = curr->next;
+            curr->next = pre;
+
+            pre = curr;
+            curr = next;
+        }
+
+        return pre;
     }
 
-    ListNode preHead{};
-    auto pre = &preHead;
-    std::for_each(std::crbegin(nodeArray), std::crend(nodeArray),
-                  [&pre](const auto& node) {
-                    pre->next = node;
-                    pre = node;
-                  });
+    ListNode* reverseList(ListNode* head)
+    {
+        std::vector<ListNode*> nodeArray{};
 
-    pre->next = nullptr;
-    return preHead.next;
-  }
+        auto curr = head;
+        while (curr != nullptr) {
+            nodeArray.push_back(curr);
+            curr = curr->next;
+        }
 
-  ListNode* innerTraverse(ListNode* node, ListNode* preHead) {
-    if (node == nullptr) {
-      return preHead;
+        ListNode preHead{};
+        auto pre = &preHead;
+        std::for_each(std::crbegin(nodeArray), std::crend(nodeArray), [&pre](const auto& node) {
+            pre->next = node;
+            pre = node;
+        });
+
+        pre->next = nullptr;
+        return preHead.next;
     }
 
-    auto pre = innerTraverse(node->next, preHead);
-    pre->next = node;
+    ListNode* innerTraverse(ListNode* node, ListNode* preHead)
+    {
+        if (node == nullptr) {
+            return preHead;
+        }
 
-    return node;
-  }
+        auto pre = innerTraverse(node->next, preHead);
+        pre->next = node;
 
-  ListNode* reverseListRecurse(ListNode* head) {
-    ListNode preHead{};
+        return node;
+    }
 
-    auto res = innerTraverse(head, &preHead);
-    res->next = nullptr;
+    ListNode* reverseListRecurse(ListNode* head)
+    {
+        ListNode preHead{};
 
-    return preHead.next;
-  }
+        auto res = innerTraverse(head, &preHead);
+        res->next = nullptr;
+
+        return preHead.next;
+    }
 };
 
-TEST(A, A) {
-  auto head = ConstructList({1, 2, 3, 4, 5});
-  Solution().reverseList(head);
+TEST(A, A)
+{
+    auto head = ConstructList({1, 2, 3, 4, 5});
+    Solution().reverseList(head);
 }

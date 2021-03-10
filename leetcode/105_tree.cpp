@@ -5,7 +5,7 @@ class Solution {
   using iter = std::vector<int>::const_iterator;
   TreeNode* buildSubtree(iter pre_start, iter pre_end, iter in_start,
                          iter in_end) {
-    auto node = new TreeNode(*pre_start);
+    auto *node = new TreeNode(*pre_start);
     if (pre_start != pre_end) {
       auto node_iter = std::find(in_start, in_end, node->val);
       auto left_tree_len = std::distance(in_start, node_iter);
